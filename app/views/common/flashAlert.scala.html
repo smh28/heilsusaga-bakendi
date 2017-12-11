@@ -1,0 +1,15 @@
+@()
+
+
+@if(flash.contains("danger")) {
+  <div class="alert alert-danger" role="alert">@Html(flash.get("danger").toString())<button class="close" data-dismiss="alert"></button></div>
+}
+@if(flash.contains("warning")) {
+  <div class="alert alert-warning" role="alert"> @Html(flash.get("warning").toString())<button class="close" data-dismiss="alert"></button></div>
+}
+@if(flash.contains("info")) {
+  <div class="alert alert-info" role="alert">@Html(flash.get("info").toString())<button class="close" data-dismiss="alert"></button></div>
+}
+@if(flash.contains("success")) {
+  <div class="alert alert-success" role="alert">@Html(flash.get("success").toString())<button class="close" data-dismiss="alert"></button></div>
+}

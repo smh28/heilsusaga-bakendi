@@ -1,0 +1,35 @@
+
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# An example controller showing a sample home page
+GET     /                           controllers.Application.index
+
+# login and logout
+GET         /login                  controllers.LoginCtrl.loginPage()
+POST        /login                  controllers.LoginCtrl.loginPost()
+GET         /islogin                controllers.LoginCtrl.loginIslykill()
+GET         /logout                 controllers.LoginCtrl.logout()
+
+# post from Island.is needs to have the nocsrf attribute
++nocsrf
+POST        /islykill               controllers.LoginCtrl.islykill()
+
+#  change languages
+GET         /english                controllers.Application.english()
+GET         /icelandic              controllers.Application.icelandic()
+
+
+#  consent
+GET         /consent                controllers.Application.consent()
+POST        /consent                controllers.Application.consentPost()
+GET         /consent/reject         controllers.Application.wouldNotLikeToParticipate()
+
+
+
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
+      

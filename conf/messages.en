@@ -1,0 +1,66 @@
+current_language=en
+
+main.logout=Logout
+main.lang_is=Icelandic
+main.lang_en=English
+
+main.error_title=Page not found
+main.error_text=404 error
+
+general.warning_ssn_not_correct=Social security number incorrect:
+general.warning_ssn_not_correctly_entered=Social security number incorrect
+general.warning_error=Error:
+general.warning_error_no_files_found=Error: No entries found
+general.warning_must_select_checkbox=Please select the checkbox to confirm
+general.warning_unable_to_update=Unable to update
+general.warning_no_access=You need privileges to register
+general.warning_ssn_not_found=Unable to find person
+general.warning_password_wrongly_entered=Password has been registered incorrectly too often.
+general.warning_password_wrongly_entered_2=Please send e-mail to
+general.warning_password_wrongly_entered_3=and we will assist you.
+general.warning_password_tries_left=tries left.
+general.warning_password_incorrect=Login failed, please check social security number and password.
+general.warning_login_failed=Login failed.
+general.warning_password_lockout_1=Password has been registered incorrectly too often.
+general.warning_password_lockout_2=Please send email to
+general.warning_password_lockout_3=and we will assist you.
+general.warning_password_required=Password is required
+general.warning_ssn_incorrect=Social security number is incorrect
+general.warning_open_for_login=Account has been locked
+general.warning_info_updated=Information updated
+general.warning_unable_to_update_person=Unable to find person to update.
+general.warning_unable_to_find_survey=Unable to find survey
+general.warning_please_answare_all=Please answer all questions
+general.warning_user_not_found=Unsuccessful log-in. 
+general.warning_user_not_found_detailed=Thank you very much for your interest in the research but we would like to point out that it only includes those who are born in 1975 or earlier. The reason is that the precursor condition of multiple myeloma is generally not diagnosed before the age of 40 and that was therefore the set age limit for this research. However, if the conclusion of the research is that it is important to diagnose those with precursor condition of multiple myeloma, it will in the future benefit us all in the fight against multiple myeloma. It is therefore very important to encourage others around you, who are born in 1975 or earlier and living in Iceland, to participate.
+general.warning_email_invalid=E-mail is invalid
+
+main.login_title=Login - Heilsusaga
+main.login_ssn=Icelandic personal identification number
+main.login_ssn_placeholder=Personal identification number
+main.login_password=Password
+main.login_password_placeholder=The password you got sent to your home
+main.login_loginbutton=Login
+main.login_loginIslykillButton=Login with IceKey
+main.login_heading=Login
+main.login_description=Please login with your personal identification number and the password you received in your mail.
+main.login_description_icekey=Please select the button bellow to log in with the Ice Key or digital certificates.
+
+
+main.consent_title=Informed consent
+main.consent_declined_header=You have opted out of participation
+main.consent_declined_message=If you change your mind, please click confirm below.
+main.consent_registered_heading=You are registered as a participant.
+main.consent_registered_message=Thanks for participating. If you change your mind and no longer want to participate, or have questions regarding the study, please send an email to
+main.consent_survey_message=We would appreciate if you were to take part in a survey in connection with the research.
+main.consent_survey_btn=Participate in the survey
+main.consent_heading=Give consent for participation in the research
+main.consent_agree_label=I have read the Terms and Conditions and accept
+main.consent_email_text=Please type in your email address so we can contact you if the research shows any results that might be of interest to you. We will only use your email address associated with this research.
+main.consent_email_label=E-mail
+main.consent_confirm_btn=Confirm
+main.consent_reject_label=I wish not to participate in this research.
+
+
+
+

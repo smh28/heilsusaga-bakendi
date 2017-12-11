@@ -1,0 +1,83 @@
+@(person: Person)
+
+@script = {
+  <script src="@routes.Assets.at("javascripts/consent.js")"></script>
+}
+
+@css = { }
+
+@import common.flashAlert
+@main("consent",Messages("main.consent_title"), script, css) {
+
+
+  @if(person != null) {
+
+    <div class="container content-holder">
+      <div class="content clearfix">
+        <h2>@person.getName() (@utils.General.formatSSN(person.getSsn()))</h2>
+        <hr>
+        @if(Application.hasRejected()) {
+          <div class="alert alert-danger" role="alert">
+            <h4 class="alert-heading">@Messages("main.consent_declined_header")</h4>
+            <p>@Messages("main.consent_declined_message")</p>
+          </div>
+        }
+        @if(Application.hasAgreed()) {
+          <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">@Messages("main.consent_registered_heading")</h4>
+            <p>@Messages("main.consent_registered_message") <a href="mailto:heilsuaga@@heilsuaga.is">
+              heilsuaga@@heilsuaga.is</a>.
+          </div>
+
+
+        }
+
+          <form action="@routes.Application.consentPost" method="post">
+            @helper.CSRF.formField
+
+            <div class="form-group  form-group-lg">
+              <h3>@Messages("main.consent_heading")</h3>
+              <div id="terms">
+              @if(Messages("current_language").equalsIgnoreCase("is")) {
+                <p>Með samþykkt minni staðfesti ... </p>
+              } else {
+                  <p>With my signature I affirm that I have read the information that was sent to me regarding the study, that I am fully informed as to the purpose of the study and what my participation entails. I have decided to participate in the study of my own free will and under no duress. I am aware that after signing this declaration of consent I can nonetheless opt out of the study at any given time, without that decision affecting my treatment plan in any way. I am aware that signing this declaration of consent does not entail any waiver of my legal rights.</p>
+              }
+              </div>
+            </div>
+            <div class="checkbox form-group required control-inline">
+              @if(person.hasAgreed) {
+                <input type="checkbox" name="agree" id="agree" value="1" required="required" class="styled-checkbox" checked="checked">
+              } else {
+                <input type="checkbox" name="agree" id="agree" value="1" required="required" class="styled-checkbox">
+              }
+              <label class="control-label" for="agree">@Messages("main.consent_agree_label")</label>
+            </div>
+
+            <div class="form-group  form-group-lg ">
+              <p>@Messages("main.consent_email_text")</p>
+              <label for="email"  class="control-label">@Messages("main.consent_email_label")</label>
+              <input type="email" name="email" id="email" required="required" placeholder="nafn@@netfang.is"  value="@person.getEmail"  class="email-addr">
+            </div>
+
+            @flashAlert()
+            <div class="form-group  form-group-lg">
+              <button type="submit" class="btn btn-lg btn-default btn-submit">@Messages("main.consent_confirm_btn")</button>
+            </div>
+            @if(!Application.hasRejected) {
+              <div class="divider"></div>
+
+              <div class="button-link">
+                <a href="@routes.Application.wouldNotLikeToParticipate" class="link_not_participate">
+                @Messages("main.consent_reject_label")</a>
+              </div>
+            }
+          </form>
+
+      </div>
+    </div>
+
+  } else {
+    <div class="alert alert-danger" role="alert">Engin notandi er innskráður  <button class="close" data-dismiss="alert"></button></div>
+  }
+}

@@ -1,0 +1,15 @@
+@()
+
+@import common.flashAlert
+
+@main("", "Aðgangur bannaður") {
+  <div class="container content-holder">
+    <div class="content clearfix">
+
+      <h1>Þú hefur því miður ekki aðgang að þessari síðu</h1>
+
+      @flashAlert()
+
+    </div>
+  </div>
+}

@@ -1,0 +1,89 @@
+@(menuitem: String, title: String, scripts: Html = Html(""), css: Html = Html(""))(content: Html)
+<!DOCTYPE html>
+
+    @checkActive(thisMenuItem: String) = {
+        @if(thisMenuItem == menuitem) { class="active" }
+    }
+
+<html lang="is">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="description" content="Heilsusaga - Þekking í almannaþágu">
+        <meta name="author" content="">
+        <title>@title</title>
+        <link href='https://fonts.googleapis.com/css?family=Cantarell' rel='stylesheet'>
+        <link rel="stylesheet" href="@routes.Assets.at("stylesheets/bootstrap.min.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+
+
+        <link rel="apple-touch-icon" sizes="76x76" href="@routes.Assets.at("images/favicons/apple-touch-icon.png")">
+        <link rel="icon" type="image/png" sizes="32x32" href="@routes.Assets.at("images/favicons/favicon-32x32.png")">
+        <link rel="icon" type="image/png" sizes="16x16" href="@routes.Assets.at("images/favicons/favicon-16x16.png")">
+        <link rel="manifest" href="@routes.Assets.at("images/favicons/manifest.json")">
+        <link rel="mask-icon" href="@routes.Assets.at("images/favicons/safari-pinned-tab.svg")" color="#5bbad5">
+        <link rel="shortcut icon" href="@routes.Assets.at("images/favicons/favicon.ico")">
+        <meta name="msapplication-config" content="@routes.Assets.at("images/favicons/browserconfig.xml")">
+        <meta name="theme-color" content="#ffffff" />
+        <meta property="og:url" content="https://www.heilsusaga.is" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Heilsusaga - Þekking í almannaþágu." />
+        @css
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="header clearfix">
+                <nav>
+                    <ul class="nav nav-pills float-right">
+                        @if(Application.isLoggedIn && Application.isAdmin) {
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Uppfletting</a>
+                            </li>
+                        }
+
+                        @if(!Messages("current_language").equalsIgnoreCase("is")) {
+                            <li class="nav-item"><a  class="nav-link" href="@routes.Application.icelandic">Íslenska</a></li>
+                        }
+                        @if(!Messages("current_language").equalsIgnoreCase("en")) {
+                            <li class="nav-item"><a  class="nav-link" href="@routes.Application.english">English</a></li>
+                        }
+                        @if(Application.isLoggedIn) {
+                            <li class="nav-item">
+                                <a class="nav-link" href="@routes.LoginCtrl.logout">@Messages("main.logout")</a>
+                            </li>
+                        }
+                    </ul>
+                </nav>
+
+                <h3 class="text-muted">
+                    <a href="/">
+                        <img src="@routes.Assets.at("images/Heilsusaga-isl-01-glaert.png")" height="60" />
+                    </a>
+                </h3>
+            </div>
+
+            @content
+
+
+        </div> <!-- /container -->
+
+        <br>
+        <br>
+        <br>
+
+        <div class="footer">
+            <!--<hr>-->
+            <img src="@routes.Assets.at("images/hi_logo_positiv_is_vert.png")"  width="145px" height="100px;"/>
+        </div>
+
+
+        <script src="@routes.Assets.at("javascripts/jquery-3.1.1.slim.min.js")"></script>
+        <script src="@routes.Assets.at("javascripts/tether.min.js")"></script>
+        <script src="@routes.Assets.at("javascripts/bootstrap.min.js")"></script>
+
+        @scripts
+
+    </body>
+</html>

@@ -1,0 +1,62 @@
+current_language=is
+
+main.logout=Útskrá
+main.lang_is=Íslenska
+main.lang_en=English
+
+main.error_title=Síða ekki til
+main.error_text=Það er ekkert hér
+
+general.warning_ssn_not_correct=Kennitala ekki rétt:
+general.warning_ssn_not_correctly_entered=Kennitala ekki rétt skráð
+general.warning_error=Villa:
+general.warning_error_no_files_found=Villa: Engar skráningar fundust
+general.warning_must_select_checkbox=Verður að merkja við hakboxið til að staðfesta
+general.warning_unable_to_update=Tókst ekki að uppfæra upplýsingar
+general.warning_no_access=Þú hefur ekki réttindi til að skrá sýni
+general.warning_ssn_not_found=Fann ekki kennitölu
+general.warning_password_wrongly_entered=Lykilorð hefur verið skráð rangt of oft.
+general.warning_password_wrongly_entered_2=Vinsamlegast sendið póst á
+general.warning_password_wrongly_entered_3=og við munum hafa samband til að aðstoða þig við innskráningu.
+general.warning_password_tries_left=tilraunir eftir.
+general.warning_password_incorrect=Innskráning tókst ekki, vinsamlegast athugið kennitölu og lykilorð.
+general.warning_login_failed=Innskráning tókst ekki.
+general.warning_password_lockout_1=Lykilorð hefur verið skráð rangt of oft.
+general.warning_password_lockout_2=Vinsamlegast sendið póst á
+general.warning_password_lockout_3=og við munum hafa samband til að aðstoða þig við innskráningu.
+general.warning_password_required=Nauðsynlegt er að skrá lykilorð
+general.warning_ssn_incorrect=Kennitala er ekki rétt
+general.warning_open_for_login=Opnað fyrir innskráningu
+general.warning_info_updated=Upplýsingar hafa verið uppfærðar
+general.warning_unable_to_update_person=Fann ekki viðkomandi til að uppfæra.
+general.warning_unable_to_find_survey=Fann ekki viðkomandi könnun
+general.warning_please_answare_all=Nauðsynlegt er að taka afstöðu til allra spurninga
+general.warning_user_not_found=Ekki tókst að skrá inn.
+general.warning_user_not_found_detailed=Kærar þakkir fyrir áhuga þinn á rannsókninni en við viljum benda á að hún nær eingöngu til þeirra sem fæddir eru árið 1975 og fyrr. Ástæða þess er að forstig mergæxlis greinist almennt ekki fyrr en eftir að fólk nær 40 ára aldri og því miðast rannsóknin við þau aldursmörk. Aftur á móti ef niðurstöður rannsóknarinnar sýna fram á mikilvægi þess að greina forstig mergæxlis mun það í framtíðinni gagnast öllum í baráttunni gegn þessum sjúkdómi. Því er líka mikilvægt að hvetja aðra í kringum þig sem eru fæddir 1975 eða fyrr að taka þátt.
+general.warning_email_invalid=Netfang ekki rétt skráð
+
+
+main.login_title=Innskráning - Heilsusaga
+main.login_ssn=Kennitala
+main.login_ssn_placeholder=Kennitala
+main.login_password=Lykilorð
+main.login_password_placeholder=Heimsent lykilorðið
+main.login_loginbutton=Innskráning
+main.login_loginIslykillButton=Íslykill eða rafræn skilríki
+main.login_heading=Innskráning
+main.login_description=Vinsamlega skráðu þig inn með Íslykli/Rafrænum skilríkjum til að skrá þig sem þátttakanda í rannsókninni Heilsusaga Íslendinga.   
+main.login_description_icekey=Smelltu á takkann hér fyrir neðan til að skrá þig inn með Íslykli eða rafrænum skilríkjum.
+
+main.consent_title=Samþykki
+main.consent_declined_header=Þú hefur afþakkað þátttöku
+main.consent_declined_message=Ef þér snýst hugur, þá samþykkir þú skilmálana og smellir á staðfesta hér fyrir neðan.
+main.consent_registered_heading=Þú ert skráður sem þátttakandi.
+main.consent_registered_message=Takk fyrir þátttökuna. Ef þér snýst hugur og vilt ekki lengur taka þátt, eða hefur spurningar varðandi rannsóknina getur þú sent tölvupóst á
+main.consent_survey_message=Okkur þætti vænt um ef þú værir til í að taka þátt í könnun á lífsgæðum í tengslum við rannsóknina.
+main.consent_survey_btn=Taka þátt í lífsgæðakönnun
+main.consent_heading=Veita samþykki fyrir þátttöku í rannsókn
+main.consent_agree_label=Ég hef lesið ofangreinda skilmála og samþykki þá
+main.consent_email_text=Endilega skráðu netfangið þitt þannig að við getum haft samband við þig ef rannsóknin leiðir eitthvað í ljós. Við munum einungis nota netfangið þitt í tengslum við þessa rannsókn.
+main.consent_email_label=Netfang
+main.consent_confirm_btn=Staðfesta
+main.consent_reject_label=Ég óska eftir að taka EKKI þátt í þessari rannsókn.

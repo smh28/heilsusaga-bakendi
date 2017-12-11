@@ -1,0 +1,55 @@
+@(ssn: String)
+@import common.flashAlert
+
+
+@main("login", Messages("main.login_title")) {
+    <div class="hero">
+    <div class="container form-holder">
+
+      @flashAlert()
+
+      <div class="row">
+
+        <div class="col-md-12 form-fields">
+          <h3>@Messages("main.login_heading")</h3>
+            <div class="login-description">@Messages("main.login_description")</div>
+            <!--
+            <form action="/login" method="post">
+                @helper.CSRF.formField
+                <div class="form-group  form-group-lg">
+                    <label for="inputSSN">@Messages("main.login_ssn")</label>
+                    <input type="text" class="form-control" name="inputSSN" id="inputSSN" placeholder="@Messages("main.login_ssn_placeholder")" value="@ssn">
+                </div>
+                <div class="form-group form-group-lg">
+                    <label for="password">@Messages("main.login_password")</label>
+                    <input type="password" class="form-control" name="password" id="password" placeholder="@Messages("main.login_password_placeholder")">
+                </div>
+                <button name="submit" type="submit" class="btn btn-lg btn-default">@Messages("main.login_loginbutton")</button>
+            </form>
+-->
+<!--
+          <br />
+          <br />
+          <br />
+
+          <br />
+          <br />
+          <br />
+-->
+          <br />
+
+            <div class="islogin-description">@Messages("main.login_description_icekey")</div><a href="/islogin"><button class="btn btn-lg btn-submit btn-icekey"><img src="@routes.Assets.at("images/icon-key.png")"> @Messages("main.login_loginIslykillButton")</button></a>
+            <br>
+            <br>
+
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+}
